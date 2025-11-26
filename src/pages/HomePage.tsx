@@ -42,13 +42,59 @@ const HomePage = () => {
   }];
 
 
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Gnathos Dental",
+    "description": "Gnathos Dental is one of the best dental clinic in Hyderabad offering advanced dental treatments including implants, root canal, orthodontics, cosmetic dentistry, and emergency care.",
+    "url": "https://www.gnathosdental.in/",
+    "telephone": "090006 66476",
+    "image": "https://www.gnathosdental.in/path-to-image.jpg",
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "CARE Hospitals, Old Mumbai Hwy, near Cyberabad Police Commissionerate, Jayabheri Pine Valley, HITEC City",
+      "addressLocality": "Hyderabad",
+      "addressRegion": "Telangana",
+      "postalCode": "500032",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "17.4435",
+      "longitude": "78.3772"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "sameAs": [
+      "https://facebook.com/",
+      "https://instagram.com/",
+      "https://linkedin.com/"
+    ],
+    "hasMap": "https://maps.app.goo.gl/fhikENYGKsNqhsxT7"
+  };
+
   return (
     <div className="bg-white">
       <SEO
         title="Best Dental Clinic in Hyderabad | Gnathos Dental - Painless & Advanced Treatments"
         description="Gnathos Dental - Best dental clinic in Hyderabad offering painless dental implants, root canal, crowns & cosmetic dentistry. 15+ years experience, 1000+ happy patients. Book appointment today!"
         keywords="best dental clinic in Hyderabad, dental implants Hyderabad, painless root canal, dental crowns, cosmetic dentistry, Gnathos Dental, Hitech City dentist"
-        canonical="https://gnathosdentalcare.com/" />
+        canonical="https://gnathosdentalcare.com/"
+        schema={schemaData} />
 
       {/* Hero Section */}
       <section id="home" className="pt-20 lg:pt-24 pb-16 bg-gradient-to-br from-gnathos-primary/5 via-white to-gnathos-secondary/5">
